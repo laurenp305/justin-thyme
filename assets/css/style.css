@@ -25,8 +25,13 @@ textarea{
   border-bottom: 10px solid black;
 }
 
+#clearFieldsBtn {
+  margin-top: 10px;
+}
+
 .description{
   white-space: pre-wrap;
+  font-weight: 600;
 }
 
 .time-block{
@@ -44,32 +49,41 @@ textarea{
   background-color: #ffffff;
   color: #000000;
   border-top: 1px dashed #000000;
+  padding-top: 27px;
+  padding-left: 10px;
+  font-size: 25px;
+  font-weight: 500;
 }
 
 .past {
-  background-color: #d3d3d3;
+  background-color: #dfe6e9;
+  border-radius: 15px;
   color: white;
 }
 
 .present {
-  background-color: #ff6961;
-  color: white;
+  background-color: #d63031;
+  border-radius: 15px;
 }
 
 .future {
-  background-color: #77dd77;
-  color: white;
+  background-color: #55efc4;
+  border-radius: 15px;
 }
 
 .saveBtn {
-  border-left: 1px solid black;
+  border-left: 1px solid rgb(82, 82, 82);
   border-top-right-radius: 15px;
   border-bottom-right-radius: 15px;
-  background-color: #06AED5;
+  background-color: #0984e3;
   color: white;
 }
 
 .saveBtn i:hover {
-  font-size: 20px;
-  transition: all .3s ease-in-out;
+  font-size: 30px;
+  transition: all 0.2s ease-in-out;
+}
+
+.white-text {
+  color: white;
 }
