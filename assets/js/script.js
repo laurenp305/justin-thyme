@@ -9,3 +9,9 @@ $(document).ready(function () {
     displayDate.innerHTML = NowMoment;
     let currentHour = moment().format("HH");
 
+// Clear fields function
+  $("#clearFieldsBtn").click(function (event) {
+    event.preventDefault;
+    $("textarea").val("");
+    localStorage.clear();
+  });
