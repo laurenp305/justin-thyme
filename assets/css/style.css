@@ -19,6 +19,9 @@ textarea{
   background-color: transparent;
   color: black;
   border-radius: 0;
+  padding-top: 30px;
+  padding-bottom: 20px;
+  margin-bottom: 0px;
   border-bottom: 10px solid black;
 }
 
