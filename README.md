@@ -20,3 +20,6 @@
 
 
 ## Link to Live Site
+
+https://laurenp305.github.io/justin-thyme/
+
