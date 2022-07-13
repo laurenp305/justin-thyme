@@ -20,6 +20,10 @@
 - WHEN I refresh the page
 - THEN the saved events persist
 
+## Description
+This is a work day scheduler that allows users to store any items according to the time for the day. For example, if the user wanted to add a 4 pm doctor's appointment on their calendar for the day, they can type it in the appropriate time slot and save the information. Users won't have to worry about losing any information if they refresh the page, as any items saved are stored unless the "clear fields" button is used to clear all items. Each time slot for the day is highlighted in one of three colors: green for current hour, red for future hours, and gray for past hours. 
+
+
 ## Screenshot of Live Site 
 
 <img width="1392" alt="image" src="https://user-images.githubusercontent.com/106932259/178841376-8d417ff3-2396-4e72-8600-65757b74e9a7.png">
