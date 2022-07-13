@@ -16,6 +16,7 @@
 
 ## Screenshot of Live Site 
 
+<img width="1392" alt="image" src="https://user-images.githubusercontent.com/106932259/178841376-8d417ff3-2396-4e72-8600-65757b74e9a7.png">
 
 
 ## Link to Live Site
