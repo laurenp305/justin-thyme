@@ -1,16 +1,13 @@
-// WHEN I open the planner the current day is displayed at the top of the calendar 
-$(document).ready(function () {
-  let NowMoment = moment().format("MMMM Do YYYY");
-  let displayDate = document.getElementById("currentDay");
-  displayDate.innerHTML = NowMoment;
-  let currentHour = moment().format("HH");
-
-//adds timer on top of page that gives real time
+//Displays date and current time
 function timer() {
+  var todayDate = moment().format('dddd, MMM Do YYYY');
+  var currentTodayDate = document.querySelector("#currentDay");
   var time = moment().format('h:mm:ss a');
   var currentTime = document.querySelector("#currentTime");
   currentTime.textContent = time;
+  currentTodayDate.textContent = todayDate;
 }
+
 setInterval(timer, 1000)
 // Clear fields function
   $("#clearFieldsBtn").click(function (event) {
@@ -52,4 +49,4 @@ $(".saveBtn").click(function (event) {
   $("#hour-15 .time-block").val(localStorage.getItem("15"));
   $("#hour-16 .time-block").val(localStorage.getItem("16"));
   $("#hour-17 .time-block").val(localStorage.getItem("17"));
-});
+
