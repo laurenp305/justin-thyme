@@ -10,8 +10,8 @@ function timer() {
 }
 
 setInterval(timer, 1000)
-// // Clear fields function
 
+// // Clear fields function
 const clearFieldsBtn = document.getElementById('clearFieldsBtn');
 
 clearFieldsBtn.addEventListener('click', function handleClick(event) {
@@ -29,8 +29,8 @@ clearFieldsBtn.addEventListener('click', function handleClick(event) {
 function colorCoding() { 
 
   var currentHour = moment().hour();
-  $(".time-block description").each(function() {
-      var elementHour = parseInt($(this).attr("id").split("hour")[1]);
+  $("textarea").each(function() {
+      var elementHour = Math.abs(parseInt($(this).parent().attr("id").split("hour")[1]));
 
       if (elementHour < currentHour) {
         $(this).addClass("past");
