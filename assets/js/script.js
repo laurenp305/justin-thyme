@@ -9,27 +9,22 @@ function timer() {
 }
 
 setInterval(timer, 1000)
-// Clear fields function
-  $("#clearFieldsBtn").click(function (event) {
-    event.preventDefault;
-    $("textarea").val("");
-    localStorage.clear();
-  });
+// // Clear fields function
+const clearFieldsBtn = document.getElementById('clearFieldsBtn');
 
-// WHEN I view the time blocks for that day each time block is color-coded to indicate whether it is in the past, present, or future
-$(".time-div").each(function () {
-    var timeDiv = $(this).attr("id").split("-")[1];
-    if (currentHour == timeDiv) {
-        $(this).addClass("present");
-        $(this).children(".description").addClass("white-text");
-      } else if (currentHour < timeDiv) {
-        $(this).removeClass("present");
-        $(this).addClass("future");
-      } else if (currentHour > timeDiv) {
-        $(this).removeClass("future");
-        $(this).addClass("past");
-      }
-    });
+clearFieldsBtn.addEventListener('click', function handleClick(event) {
+  // 👇️ if you are submitting a form
+  event.preventDefault();
+
+  const inputs = document.querySelectorAll('textarea');
+
+  inputs.forEach(input => {
+    input.value = '';
+  });
+});
+
+//WHEN I view the time blocks for that day each time block is color-coded to indicate whether it is in the past, present, or future
+
 
 // WHEN I refresh the page the saved events remain
 $(".saveBtn").click(function (event) {
