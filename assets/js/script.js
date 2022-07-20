@@ -1,3 +1,4 @@
+$( document ).ready(function() {
 //Displays date and current time
 function timer() {
   var todayDate = moment().format('dddd, MMM Do YYYY');
@@ -10,6 +11,7 @@ function timer() {
 
 setInterval(timer, 1000)
 // // Clear fields function
+
 const clearFieldsBtn = document.getElementById('clearFieldsBtn');
 
 clearFieldsBtn.addEventListener('click', function handleClick(event) {
@@ -24,7 +26,29 @@ clearFieldsBtn.addEventListener('click', function handleClick(event) {
 });
 
 //WHEN I view the time blocks for that day each time block is color-coded to indicate whether it is in the past, present, or future
+function colorCoding() { 
 
+  var currentHour = moment().hour();
+  $(".time-block description").each(function() {
+      var elementHour = parseInt($(this).attr("id").split("hour")[1]);
+
+      if (elementHour < currentHour) {
+        $(this).addClass("past");
+        $(this).removeClass("present");
+        $(this).removeClass("future");
+    }
+    else if (elementHour === currentHour) {
+        $(this).addClass("present");
+        $(this).removeClass("past");
+        $(this).removeClass("future");
+    }
+    else {
+        $(this).addClass("future");
+        $(this).removeClass("present");
+        $(this).removeClass("past");
+    }
+})
+}
 
 // WHEN I refresh the page the saved events remain
 $(".saveBtn").click(function (event) {
@@ -44,4 +68,7 @@ $(".saveBtn").click(function (event) {
   $("#hour-15 .time-block").val(localStorage.getItem("15"));
   $("#hour-16 .time-block").val(localStorage.getItem("16"));
   $("#hour-17 .time-block").val(localStorage.getItem("17"));
+
+  colorCoding();
+});
 
